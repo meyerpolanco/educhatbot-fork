@@ -5,9 +5,6 @@ langchain-ollama
 langchain-text-splitters
 langchain-classic 
 pypdf
-langchain-anthropic
 python-dotenv
 flask
 flask-cors
-azure-cosmos
-langchain-azure-ai

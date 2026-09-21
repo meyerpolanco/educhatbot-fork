@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import Markdown from "react-markdown";
 
 export default function App() {
+  // The external site currently loops through its security challenge in an iframe.
+  const SHOW_HANDBOOK = false;
   const [search, setSearch] = useState("");
   const [submittedSearch, setSubmittedSearch] = useState("");
   const [leftWidth, setLeftWidth] = useState(50);
@@ -134,6 +136,7 @@ export default function App() {
     >
       <section
         style={{
+          display: SHOW_HANDBOOK ? "block" : "none",
           width: `${leftWidth}%`,
           minHeight: 0,
           background: "#ffffff",
@@ -144,7 +147,7 @@ export default function App() {
         <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
           <iframe
             title="Live Handbook"
-            src={handbookUrl}
+            src={SHOW_HANDBOOK ? handbookUrl : undefined}
             style={{
               height: "100%",
               width: "100%",
@@ -161,6 +164,7 @@ export default function App() {
           setIsResizing(true);
         }}
         style={{
+          display: SHOW_HANDBOOK ? "block" : "none",
           width: "4px",
           cursor: "col-resize",
           background: "#ffffff",
