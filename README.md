@@ -2,7 +2,7 @@
 
 A RAG (Retrieval-Augmented Generation) chatbot designed to help researchers and policy creators analyze education policy documents.
 
-## 🚀 Getting Started Locally
+## Getting Started Locally
 
 The chatbot runs locally with Python, Node.js, Ollama, and a persistent Chroma database.
 
@@ -48,14 +48,14 @@ npm run dev
 
 The backend is available at `http://localhost:7860` and the frontend at `http://localhost:5173`.
 
-## 🛠 Project Structure
+## Project Structure
 
 - `UI.py`: Flask backend providing the `/chat` and `/health` endpoints.
 - `src/query.py`: Core RAG logic using LangChain, Ollama, and Chroma.
 - `src/ingest.py`: Script to process PDFs from the `docs/` folder into the vector database.
 - `frontend/`: Vite + React application for the user interface.
 
-## 📝 Ingesting Documents
+## Ingesting Documents
 
 If the database is empty or you've added new PDFs to the `docs/` folder, run:
 
